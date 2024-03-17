@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"
+    />
+    <meta name="description" content="User-defined clipping planes applied to terrain.">
+    <meta name="cesium-sandcastle-labels" content="Showcases">
+    <title>Cesium Demo</title>
+    <style>
+        #toolbar  {
+            width: 600px;
+            height: 50px;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: rgba(237, 232, 232, 0.5);
+            padding: 4px;
+            border-radius: 4px;
+            z-index: 1000;
+        }
+        select {
+          width: 300px;
+            margin-right: 10px;
+        }
+
+      </style>
+    <script type="text/javascript" src="../Sandcastle-header.js"></script>
+    <script src="../CesiumUnminified/Cesium.js"></script>
+    <script>window.CESIUM_BASE_URL = "../CesiumUnminified/";</script>
+  <script defer src="app.js"></script></head>
+  <body
+    class="sandcastle-loading"
+    data-sandcastle-bucket="bucket-requirejs.html"
+  >
+    <div id="cesiumContainer1" class="fullSize"></div>
+    <div id="cesiumContainer2" class="fullSize"></div>
+    
+    <div id="loadingOverlay"><h1>Loading...</h1></div>
+
+    <div id="toolbar">
+        <!-- <select data-bind="options: exampleTypes, value: currentExampleType"></select> -->
+      <input type="checkbox" value="false" data-bind="checked: clippingPlanesEnabled, valueUpdate: 'input'">
+      Globe clipping planes enabled
+      <input type="checkbox" value="false" data-bind="checked: edgeStylingEnabled, valueUpdate: 'input'">
+      Edge styling enabled
+
+    </div>
+  </body>
+</html>
